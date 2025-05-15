@@ -4,14 +4,14 @@ class Vehicle {
         return "Mesin Nyala";
     }
 }
-
+// Subclass
 class Car extends Vehicle {
     @Override
     public String startEngine() {
         return "Mesin Mobil Nyala";
     }
 }
-
+// Subclass
 class Motorcycle extends Vehicle {
     @Override
     public String startEngine() {
@@ -45,7 +45,7 @@ class Driver {
     public Driver(String name, Vehicle vehicle, String licenseNumber, String validUntil) {
         this.name = name;
         this.vehicle = vehicle;
-        this.license = new License(licenseNumber, validUntil); // komposisi
+        this.license = new License(licenseNumber, validUntil); 
     }
 
     public void displayInfo() {
@@ -66,7 +66,6 @@ class Driver {
 
 public class Main {
     public static void main(String[] args) {
-        // Tanggal dibuat manual
         Driver d1 = new Driver("Jeremiah", new Car(), "L123456", "15-05-2030");
         Driver d2 = new Driver("Nawaytu", new Motorcycle(), "L654321", "20-11-2029");
         Driver d3 = new Driver("Karim", new Motorcycle(), "L987654", "01-01-2031");
